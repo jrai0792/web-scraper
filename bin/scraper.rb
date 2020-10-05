@@ -16,21 +16,13 @@ def intro
   puts 'Please enter any number between 1 to 27 to see the attraction and details about it.'
 end
 
-def verify_ui(user_input)
-  if user_input <28 && user_input >= 1
-    return true
-  else
-    return false
-  end
-end
-
 def take_input
   program = Program.new
   input=""
   loop do
     puts 'Please enter any number between 1 to 27.'
     input = gets.chomp.to_i
-    break if verify_ui(input)
+    break if program.verify_ui(input)
   end
   puts 'Fetching details......'
   dest = program.scraper(input)
@@ -44,11 +36,11 @@ def take_input
 end
 
 def extra
-  puts 'Would you like to see some more destinations'
+  puts 'Would you like to see some more destinations.'
   puts 'Yes or No'
   user_choice = ''
   until user_choice.match?(/^yes$|^no$/)
-    puts 'Please just type YES or NO' if user_choice != ''
+    puts 'Please type YES or NO' if user_choice != ''
     user_choice = gets.chomp.downcase
   end
 

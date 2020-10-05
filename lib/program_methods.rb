@@ -6,6 +6,14 @@ class Program
 
   def initialize; end
 
+  def verify_ui(user_input)
+    if user_input <28 && user_input >= 1
+      return true
+    else
+      return false
+    end
+  end
+
   def scraper(valid_input)
     url = BASE_URL
     unparsed = URI.open(url)
