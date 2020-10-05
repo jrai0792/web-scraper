@@ -1,6 +1,6 @@
 # web-scraper
 
-> This program's purpose is to scan a webpage and take relevant data from it that could benfit the user. This project is inspired from the beautiful tourist destinations in India. I wanted to help anybody who wants to know about various famous tourist places in India. 
+> This program's purpose is to scan a webpage and take relevant data from it that could benfit the user. This project is inspired from the beautiful tourist destinations in India. I want to help anybody who wants to know about various famous tourist destinations in India. 
 
 ![screenshot](./Screenshot.png)
 
