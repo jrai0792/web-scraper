@@ -14,7 +14,7 @@ In this project, information about 27 famous tourist destinations in India is pr
 - Rubocop
 
 ## App work flow
-- The app has a welcome screen, which has small introduction about tourism in India.
+- The app has a welcome screen, which has small introduction to tourism in India.
 - User is asked to enter any number between 1 to 27.
 - If the input provided by the user is not between 1 to 27, then user is again asked for the input.
 - If the input provided by the user is between 1 to 27, then the destination name and details are displayed.

@@ -2,12 +2,11 @@ require_relative '../lib/constants.rb'
 require_relative '../lib/program_methods.rb'
 
 describe Program do
-
   test_program = Program.new
   invalid_input = 33
   valid_input = 12
 
-  describe '#verify_ui'do
+  describe '#verify_ui' do
     it 'Returns true for input between 1 to 27' do
       expect(test_program.verify_ui(valid_input)).to eql(true)
     end
