@@ -28,7 +28,7 @@ class Program
     unparsed = URI.open(url)
     parsed = Nokogiri::HTML(URI.open(url))
     html = unparsed.read
-    puts parsed.search('p')[destination + 3].text
+    return parsed.search('p')[destination + 3].text
   end
 
 end

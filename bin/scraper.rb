@@ -30,7 +30,7 @@ def take_input
   puts '-------------------------------------------------'
   puts 'Getting the destination details....'
   puts '-------------------------------------------------'
-  program.destination_details(input)
+  puts program.destination_details(input)
   puts '-------------------------------------------------'
   extra
 end
