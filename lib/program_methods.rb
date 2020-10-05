@@ -3,21 +3,17 @@ require 'httparty'
 require_relative '../lib/constants.rb'
 
 class Program
-  def states
-    STATE_NAME.each_with_index do |state,index|
-      puts "#{index += 1}: #{state}"
-    end
-  end
-
-  def union_territories
-    UNION_TERRITORIES.each_with_index do |territory,index|
-      puts "#{index += 1}: #{territory}"
-    end
-  end
+  def initialize; end
 
   def scraper
     url = BASE_URL
     unparsed = HTTParty.get(url)
-    parsed = nokogiri::HTML(unparsed.body)
+    parsed = Nokogiri::HTML(unparsed.body)
+    destinations_list = Array.new
+    destinations_list.push(parsed.css('span.toptitle').text)  
   end
+
+  
+
+
 end
