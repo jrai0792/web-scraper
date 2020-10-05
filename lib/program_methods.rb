@@ -1,19 +1,26 @@
 require 'nokogiri'
-require 'httparty'
+require 'open-uri'
 require_relative '../lib/constants.rb'
 
 class Program
+
   def initialize; end
 
-  def scraper
+  def scraper(valid_input)
     url = BASE_URL
-    unparsed = HTTParty.get(url)
-    parsed = Nokogiri::HTML(unparsed.body)
-    destinations_list = Array.new
-    destinations_list.push(parsed.css('span.toptitle').text)  
+    unparsed = URI.open(url)
+    parsed = Nokogiri::HTML(URI.open(url))
+    html = unparsed.read
+    destinations_list = parsed.css('span.toptitle').to_a
+    return destinations_list[valid_input-1].text
   end
 
-  
-
+  def destination_details(destination)
+    url = BASE_URL
+    unparsed = URI.open(url)
+    parsed = Nokogiri::HTML(URI.open(url))
+    html = unparsed.read
+    puts parsed.search('p')[destination + 3].text
+  end
 
 end
