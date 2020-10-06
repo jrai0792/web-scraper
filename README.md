@@ -2,7 +2,7 @@
 
 > This program's purpose is to scan a webpage and take relevant data from it that could benfit the user. This project is inspired from the beautiful tourist destinations in India. I want to help anybody who wants to know about various famous tourist destinations in India. 
 
-![screenshot](./Screenshot.png)
+![screenshot](.assets/images/Screenshot.png)
 
 In this project, information about 27 famous tourist destinations in India is provided.
 
@@ -37,6 +37,10 @@ Step 3: Install necessary dependencies
 Step 4: Run the app
 
 'bin/scraper.rb'
+
+### Testing
+
+Simply run rspec from the root directory
 
 ## Authors
 
